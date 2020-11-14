@@ -12,8 +12,8 @@ You can compare the code in `awslabs` with this pypi package with this command
 if [ "$(curl -s https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/CloudFormation/MacrosExamples/StackMetrics/lambda/cfnresponse.py | sha256sum)" = "$(curl -s https://raw.githubusercontent.com/gene1wood/cfnresponse/master/cfnresponse/__init__.py | sha256sum)" ]; then echo "Files match"; fi
 ```
 
-The [`setup.py`](setup.py) for this module depends on a version of 
-[`botocore`](https://github.com/boto/botocore) prior to 
-[`1.13.0`](https://github.com/boto/botocore/releases/tag/1.13.0)
-when [`botocore.vendored.requests` was removed](https://github.com/boto/botocore/pull/1829)
-which would break `cfnresponse`.
+This module [used to use the vendored version of `requests`](https://github.com/awslabs/aws-cloudformation-templates/blob/dd484dd32680fcbfc52b34de45923f78b5626e39/aws/services/CloudFormation/MacrosExamples/StackMetrics/lambda/cfnresponse.py)
+provided by `botocore` but this changed in 
+[April 2020](https://github.com/awslabs/aws-cloudformation-templates/commit/44b76a1f694f82eeee14fe804bf9dc973fdc2230#diff-f6c57142d56d8704aaf1d429ff1a06a6dd3f2ee6d80f0572ada8af010ff17124)
+to instead use `urllib3` as
+[`botocore.vendored.requests` was removed](https://github.com/boto/botocore/pull/1829).
