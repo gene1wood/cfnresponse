@@ -3,7 +3,7 @@
 This package contains the Amazon Web Services (AWS) cfnresponse module which is
 available in Python AWS Lambda environments.
 
-The code for this module can be found [in the Lambda Function Code documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-cfnresponsemodule)
+The code for this module can be found [in the AWS documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html#w2ab1c23c23c16b9c15)
 and in the [awslabs GitHub repo](https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/CloudFormation/MacrosExamples/StackMetrics/lambda/cfnresponse.py)
 
 You can compare the code in `awslabs` with this pypi package with this command
