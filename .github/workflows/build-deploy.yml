@@ -12,11 +12,11 @@ jobs:
       - name: Install build dependencies
         run: python3 -m pip install --upgrade wheel setuptools
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Build package
         run: python3 setup.py sdist bdist_wheel --universal
       - name: Publish package to PyPI
-        uses: pypa/gh-action-pypi-publish@v1.1.0
+        uses: pypa/gh-action-pypi-publish@v1.8.4
         with:
           user: __token__
           # password: ${{ secrets.TEST_PYPI_TOKEN }}
