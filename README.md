@@ -1,5 +1,7 @@
 # cfnresponse
 
+[![PyPi Version](https://badgen.net/pypi/v/cfnresponse)](https://pypi.org/project/cfnresponse/)
+
 This package contains the Amazon Web Services (AWS) cfnresponse module which is
 available in Python AWS Lambda environments.
 
@@ -9,8 +11,8 @@ and in the [awslabs GitHub repo](https://github.com/awslabs/aws-cloudformation-t
 You can compare the code in `awslabs` with this pypi package with this command
 
 ```
-if [ "$(curl -s https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/CloudFormation/MacrosExamples/StackMetrics/lambda/cfnresponse.py | sha256sum)" = "$(curl -s https://raw.githubusercontent.com/gene1wood/cfnresponse/master/cfnresponse/__init__.py | sha256sum)" ]; then echo "GitHub matches AWS"; fi
-if [ "$(curl -s https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/CloudFormation/MacrosExamples/StackMetrics/lambda/cfnresponse.py | sha256sum)" = "$(wget --quiet https://files.pythonhosted.org/packages/03/69/2d3fafdf434a0d8ef62a5c1fa09feda25b31fad4db20c54ed067054f9b95/cfnresponse-1.1.2-py2.py3-none-any.whl && unzip -p cfnresponse-1.1.2-py2.py3-none-any.whl cfnresponse/__init__.py | sha256sum && rm cfnresponse-1.1.2-py2.py3-none-any.whl)" ]; then echo "Pypi matches AWS"; fi
+if [ "$(curl -s https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/CloudFormation/MacrosExamples/StackMetrics/lambda/cfnresponse.py | sha256sum)" = "$(curl -s https://raw.githubusercontent.com/gene1wood/cfnresponse/master/cfnresponse/__init__.py | sha256sum)" ]; then echo "GitHub matches AWS"; else echo "GitHub does not match AWS"; fi
+if [ "$(curl -s https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/CloudFormation/MacrosExamples/StackMetrics/lambda/cfnresponse.py | sha256sum)" = "$(wget --quiet https://files.pythonhosted.org/packages/f9/b7/76b0abe8003a797ab535cae77e39568092eff18ac0e8e10fa9ffa245e5d3/cfnresponse-1.1.4-py2.py3-none-any.whl && unzip -p cfnresponse-1.1.4-py2.py3-none-any.whl cfnresponse/__init__.py | sha256sum && rm cfnresponse-1.1.4-py2.py3-none-any.whl)" ]; then echo "PyPi matches AWS"; else echo "PyPi does not match AWS"; fi
 ```
 
 This module [used to use the vendored version of `requests`](https://github.com/awslabs/aws-cloudformation-templates/blob/dd484dd32680fcbfc52b34de45923f78b5626e39/aws/services/CloudFormation/MacrosExamples/StackMetrics/lambda/cfnresponse.py)
