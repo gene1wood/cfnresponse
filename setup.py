@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cfnresponse",
-    version="1.1.4",
+    version="1.1.5",
     author="Amazon Web Services",
     description="Send a response object to a custom resource by way of an Amazon S3 presigned URL",
     long_description=long_description,
@@ -23,7 +23,7 @@ setuptools.setup(
         'urllib3'
     ],
     project_urls={
-        "Download": "https://github.com/gene1wood/cfnresponse/archive/refs/tags/v1.1.4.tar.gz",
+        "Download": "https://github.com/gene1wood/cfnresponse/archive/refs/tags/v1.1.5.tar.gz",
         "Source": "https://github.com/gene1wood/cfnresponse",
     },
 )
