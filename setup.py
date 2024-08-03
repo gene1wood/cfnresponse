@@ -22,4 +22,8 @@ setuptools.setup(
     install_requires=[
         'urllib3'
     ],
+    project_urls={
+        "Download": "https://github.com/gene1wood/cfnresponse/archive/refs/tags/v1.1.4.tar.gz",
+        "Source": "https://github.com/gene1wood/cfnresponse",
+    },
 )
